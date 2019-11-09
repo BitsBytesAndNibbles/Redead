@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 
     private float timeBtwAttack;
-    public float startTimeBtwAttack;
+    private float startTimeBtwAttack=0.33f;
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
@@ -30,38 +30,41 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
         animator.SetFloat("speed", movement.sqrMagnitude);
-        if (movement.x < 0 && !spriteRenderer.flipX || movement.x > 0 && spriteRenderer.flipX)
+        if (!animator.GetBool("attack") && (movement.x < 0 && !spriteRenderer.flipX || movement.x > 0 && spriteRenderer.flipX))
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
 
+        //attack
         
+        if (timeBtwAttack <= 0)
+        {
+
+            animator.SetBool("attack", false);
+            if (Input.GetKey(KeyCode.Space))
+            {
+
+                animator.SetBool("attack", true);
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                }
+                timeBtwAttack = startTimeBtwAttack;
+            }
+            
+        }
+        else
+        {
+            timeBtwAttack -= Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
     {
         //move
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-
-        //attack
-        if (timeBtwAttack <= 0)
-        {
-            if (Input.GetKey(KeyCode.Space))
-            {
-                animator.SetTrigger("attack");
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
-                }
-            }
-            timeBtwAttack = startTimeBtwAttack;
-        }
-        else
-        {
-
-            timeBtwAttack -= Time.deltaTime;
-        }
+  
     }
 
     void OnDrawGizmosSelected()
