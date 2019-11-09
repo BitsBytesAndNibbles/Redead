@@ -72,13 +72,14 @@ namespace Pathfinding {
 		/// In the Custom mode you can set the acceleration to any positive value.
 		/// </summary>
 		public float maxAcceleration = -2.5f;
+        public Vector2 currentDir;
 
-		/// <summary>
-		/// Rotation speed in degrees per second.
-		/// Rotation is calculated using Quaternion.RotateTowards. This variable represents the rotation speed in degrees per second.
-		/// The higher it is, the faster the character will be able to rotate.
-		/// </summary>
-		[UnityEngine.Serialization.FormerlySerializedAs("turningSpeed")]
+        /// <summary>
+        /// Rotation speed in degrees per second.
+        /// Rotation is calculated using Quaternion.RotateTowards. This variable represents the rotation speed in degrees per second.
+        /// The higher it is, the faster the character will be able to rotate.
+        /// </summary>
+        [UnityEngine.Serialization.FormerlySerializedAs("turningSpeed")]
 		public float rotationSpeed = 360;
 
 		/// <summary>Distance from the end of the path where the AI will start to slow down</summary>
@@ -336,6 +337,7 @@ namespace Pathfinding {
 			// Update which point we are moving towards
 			interpolator.MoveToCircleIntersection2D(currentPosition, pickNextWaypointDist, movementPlane);
 			var dir = movementPlane.ToPlane(steeringTarget - currentPosition);
+            currentDir = dir;
 
 			// Calculate the distance to the end of the path
 			float distanceToEnd = dir.magnitude + Mathf.Max(0, interpolator.remainingDistance);
