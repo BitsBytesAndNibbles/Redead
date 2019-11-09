@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: b19d306668aaa2f408a6f05941eeb4b2
+guid: 156e9a031763d4c4ca77946b929d2b4d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: noBKG_KnightRun_strip_0
-    21300002: noBKG_KnightRun_strip_1
-    21300004: noBKG_KnightRun_strip_2
-    21300006: noBKG_KnightRun_strip_3
-    21300008: noBKG_KnightRun_strip_4
-    21300010: noBKG_KnightRun_strip_5
-    21300012: noBKG_KnightRun_strip_6
-    21300014: noBKG_KnightRun_strip_7
+    21300000: noBKG_Left_KnightRun_strip_0
+    21300002: noBKG_Left_KnightRun_strip_1
+    21300004: noBKG_Left_KnightRun_strip_2
+    21300006: noBKG_Left_KnightRun_strip_3
+    21300008: noBKG_Left_KnightRun_strip_4
+    21300010: noBKG_Left_KnightRun_strip_5
+    21300012: noBKG_Left_KnightRun_strip_6
+    21300014: noBKG_Left_KnightRun_strip_7
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -92,10 +92,30 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: noBKG_KnightRun_strip_0
+      name: noBKG_Left_KnightRun_strip_0
       rect:
         serializedVersion: 2
-        x: 42
+        x: 30
+        y: 20
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ef0f9f2efc97664794e8d8011bbb2f9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_Left_KnightRun_strip_1
+      rect:
+        serializedVersion: 2
+        x: 125
         y: 20
         width: 25
         height: 29
@@ -106,16 +126,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4969bb5c7a8c343408782865c43dc316
+      spriteID: ded6a8224f97b904b81a0c00a0d5c447
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightRun_strip_1
+      name: noBKG_Left_KnightRun_strip_2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 219
         y: 20
         width: 25
         height: 30
@@ -126,56 +146,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f556193094116fb4f9a749ac9bc80b01
+      spriteID: 41a5aedff7abb074cb6b956d1cc500c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightRun_strip_2
+      name: noBKG_Left_KnightRun_strip_3
       rect:
         serializedVersion: 2
-        x: 236
-        y: 20
-        width: 27
-        height: 29
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c76395e38c2e01243a9b9610778b84dd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noBKG_KnightRun_strip_3
-      rect:
-        serializedVersion: 2
-        x: 330
-        y: 20
-        width: 30
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de5b8ca208b30a94f81306318a12cf77
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noBKG_KnightRun_strip_4
-      rect:
-        serializedVersion: 2
-        x: 426
+        x: 313
         y: 20
         width: 29
         height: 29
@@ -186,16 +166,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: add8c6b54e1e1e94aa090e34986ee427
+      spriteID: 896cfa6a18543f74693dc581896a5071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightRun_strip_5
+      name: noBKG_Left_KnightRun_strip_4
       rect:
         serializedVersion: 2
-        x: 524
+        x: 408
+        y: 20
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722ef0519c7f98541bd4306f61862f9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_Left_KnightRun_strip_5
+      rect:
+        serializedVersion: 2
+        x: 505
+        y: 20
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a828af8531e12a4fb405a60863559f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noBKG_Left_KnightRun_strip_6
+      rect:
+        serializedVersion: 2
+        x: 603
         y: 20
         width: 25
         height: 30
@@ -206,16 +226,16 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99aeef01e6a2fbc47bef1941e73e6545
+      spriteID: e3e6fa7e4cef8d5489e13b0161108b6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: noBKG_KnightRun_strip_6
+      name: noBKG_Left_KnightRun_strip_7
       rect:
         serializedVersion: 2
-        x: 618
+        x: 701
         y: 20
         width: 25
         height: 29
@@ -226,27 +246,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fbbdb31a66f8df409809dc14c8f04ff
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: noBKG_KnightRun_strip_7
-      rect:
-        serializedVersion: 2
-        x: 713
-        y: 20
-        width: 25
-        height: 28
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d13d9d6b888465e49b4405e8d745d204
+      spriteID: df95d6b2de3a15f40812fb6eefd22cbc
       vertices: []
       indices: 
       edges: []
@@ -254,7 +254,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 71d5b387dc1480b49a606689a60ad807
+    spriteID: e5077bbe13bc97c46b4409ff14cbd31f
     vertices: []
     indices: 
     edges: []
