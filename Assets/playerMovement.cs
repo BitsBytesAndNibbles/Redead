@@ -8,6 +8,10 @@ public class playerMovement : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+<<<<<<< HEAD
+=======
+    public boolean isright;
+>>>>>>> master
 
     Vector2 movement;
     // Update is called once per frame
@@ -16,6 +20,10 @@ public class playerMovement : MonoBehaviour
         //input
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+<<<<<<< HEAD
+=======
+        if(movement.)
+>>>>>>> master
         animator.SetFloat("speed",movement.sqrMagnitude);
         
     }
