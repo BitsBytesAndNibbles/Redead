@@ -10,7 +10,14 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     public SpriteRenderer spriteRenderer;
 
-	private void Start()
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask whatIsEnemies;
+    public int damage;
+
+    private void Start()
 	{
 		rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -33,6 +40,33 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        //move
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+
+        //attack
+        if (timeBtwAttack <= 0)
+        {
+            if (Input.GetKey(KeyCode.Space))
+            {
+                animator.SetTrigger("attack");
+                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                for (int i = 0; i < enemiesToDamage.Length; i++)
+                {
+                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                }
+            }
+            timeBtwAttack = startTimeBtwAttack;
+        }
+        else
+        {
+
+            timeBtwAttack -= Time.deltaTime;
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
     }
 }
