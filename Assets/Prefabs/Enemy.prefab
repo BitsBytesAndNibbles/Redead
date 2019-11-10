@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  target: {fileID: 0}
+  target: {fileID: 7813827004557756649, guid: c876373b8780dbb44b8c53ab1379e67a, type: 3}
 --- !u!1 &7105809370511133521
 GameObject:
   m_ObjectHideFlags: 0
