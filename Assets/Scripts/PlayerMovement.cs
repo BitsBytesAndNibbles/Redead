@@ -64,13 +64,21 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         //move
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
-  
+        if (!animator.GetBool("dead"))
+        {
+            rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
+        }
     }
 
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
+
+    public void TakeDamage()
+    {
+        animator.SetBool("dead", true);
+        Destroy(gameObject, 1.5f);
     }
 }

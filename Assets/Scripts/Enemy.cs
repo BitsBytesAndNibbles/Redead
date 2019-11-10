@@ -37,12 +37,16 @@ public class Enemy : MonoBehaviour
             attackPos.localPosition = new Vector2(attackPos.localPosition.x * -1, attackPos.localPosition.y);
         }
 
+        if (animator.GetBool("attack"))
+        {
+            StartCoroutine(Attack());
+        }
+
 		
     }
     
     public void TakeDamage(int damage)
     {
-
         health -= damage;
         if (health <= 0)
         {
@@ -57,6 +61,18 @@ public class Enemy : MonoBehaviour
             animator.SetTrigger("hit");
         }
 
+    }
+
+    IEnumerator Attack()
+    {
+        yield return new WaitForSeconds(3f);
+
+        Collider2D[] players = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playersToHit);
+
+        for (int i = 0; i < players.Length; i++)
+        {
+            players[i].GetComponent<PlayerMovement>().TakeDamage();
+        }
     }
 
 	private void OnTriggerExit2D(Collider2D collision)

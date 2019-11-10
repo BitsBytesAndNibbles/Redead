@@ -258,7 +258,7 @@ namespace Pathfinding {
 		/// </summary>
 		public virtual void OnTargetReached () {
             GetComponentInChildren<Animator>().SetBool("attack", true);
-		}
+        }
 
 		/// <summary>
 		/// Called when a requested path has been calculated.
