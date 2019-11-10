@@ -14,10 +14,7 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 	private AIPath enemy;
 
-    public Transform attackPos;
-    public float attackRange;
-    public LayerMask playersToHit;
-    public int damage;
+    private bool facingLeft;
 
     // Start is called before the first frame update
     void Start()
@@ -31,18 +28,11 @@ public class Enemy : MonoBehaviour
 	void Update()
     {
         animator.SetFloat("Speed", Mathf.Abs(enemy.currentDir[0]));
-		if (enemy.currentDir[0] < 0 && !spriteRenderer.flipX || enemy.currentDir[0] > 0 && spriteRenderer.flipX)
+		if (enemy.currentDir[0] < 0 && !facingLeft || enemy.currentDir[0] > 0 && facingLeft)
 		{
-			spriteRenderer.flipX = !spriteRenderer.flipX;
-            attackPos.localPosition = new Vector2(attackPos.localPosition.x * -1, attackPos.localPosition.y);
+            facingLeft = !facingLeft;
+            transform.localScale = new Vector3(transform.localScale.x * -1, transform.localScale.y, transform.localScale.z);
         }
-
-        if (animator.GetBool("attack"))
-        {
-            StartCoroutine(Attack());
-        }
-
-		
     }
     
     public void TakeDamage(int damage)
@@ -63,18 +53,6 @@ public class Enemy : MonoBehaviour
 
     }
 
-    IEnumerator Attack()
-    {
-        yield return new WaitForSeconds(3f);
-
-        Collider2D[] players = Physics2D.OverlapCircleAll(attackPos.position, attackRange, playersToHit);
-
-        for (int i = 0; i < players.Length; i++)
-        {
-            players[i].GetComponent<PlayerMovement>().TakeDamage();
-        }
-    }
-
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		Debug.Log(collision.name);
@@ -83,10 +61,4 @@ public class Enemy : MonoBehaviour
 			animator.SetBool("attack", false);
 		}
 	}
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
-    }
 }
