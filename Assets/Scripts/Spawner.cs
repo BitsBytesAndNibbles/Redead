@@ -25,10 +25,10 @@ public class Spawner : MonoBehaviour
 		if (currentEnemeries < MAXIMUM_ENEMIES)
 		{
 			Vector2 spawnPoint = GenerateRandownSpawnPoint();
-			Instantiate(Utility.instance.enemyPrefab, spawnPoint, Quaternion.identity);
+			Instantiate(Utility.instance.skeletonPrefab, spawnPoint, Quaternion.identity);
 			currentEnemeries++;
 		}
-		
+
 		Invoke("SpawnEnemies", 0.5f);
 	}
 
