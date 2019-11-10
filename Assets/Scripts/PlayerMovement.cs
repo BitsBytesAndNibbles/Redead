@@ -89,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("dead", true);
         FindObjectOfType<GameManager>().EndGame();
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 1f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
