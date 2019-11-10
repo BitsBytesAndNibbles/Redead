@@ -25,4 +25,14 @@ public class EnemyGFXController : MonoBehaviour
             spriteRenderer.flipX = !spriteRenderer.flipX;
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+        if (collision.tag == "Player")
+        {
+            animator.SetBool("attack", false);
+        }
+    }
+
 }
