@@ -6,17 +6,19 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public ParticleSystem deathEffect;
     public ParticleSystem deathExplosion;
+    public GameObject explosionPE;
 
 	private Animator animator;
     public SpriteRenderer spriteRenderer;
 	private AIPath enemy;
 
+    private void Awake()
+    {
+    }
 	// Start is called before the first frame update
 	void Start()
     {
-        deathExplosion = GetComponent<ParticleSystem>();
 		animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 		enemy = GetComponentInParent<AIPath>();
@@ -33,7 +35,10 @@ public class Enemy : MonoBehaviour
 
 		if (health <= 0)
         {
-            Destroy(gameObject);
+            //StartCoroutine(Break());
+            GameObject particle = Instantiate(explosionPE, transform);
+            Destroy(gameObject, 0.5f);
+            Destroy(particle, 1f);
         }
     }
     
@@ -43,6 +48,14 @@ public class Enemy : MonoBehaviour
         health -= damage;
 
         Debug.Log("damage TAKEN!");
+    }
+
+    private IEnumerator Break()
+    {
+        yield return new WaitForSeconds(1);
+        GameObject particle = Instantiate(explosionPE, transform);
+        Destroy(gameObject);
+        Destroy(particle, 1f);
     }
 
 	private void OnTriggerExit2D(Collider2D collision)
