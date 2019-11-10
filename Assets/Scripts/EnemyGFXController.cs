@@ -14,6 +14,7 @@ public class EnemyGFXController : MonoBehaviour
     {
         enemy = GetComponentInParent<AIPath>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
