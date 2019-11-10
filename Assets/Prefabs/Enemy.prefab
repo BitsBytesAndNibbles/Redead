@@ -20,7 +20,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7105809368993297103
 Transform:
   m_ObjectHideFlags: 0
@@ -172,6 +172,7 @@ GameObject:
   - component: {fileID: 7105809370511133523}
   - component: {fileID: 7105809370511133522}
   - component: {fileID: 1742090667}
+  - component: {fileID: 39990779}
   m_Layer: 9
   m_Name: EnemyGFX
   m_TagString: EnemyAttack
@@ -316,3 +317,40 @@ PolygonCollider2D:
       - {x: 0.19839184, y: -0.17612891}
       - {x: 0.19250958, y: -0.13333344}
       - {x: 0.19387448, y: -0.08000338}
+--- !u!60 &39990779
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7105809370511133521}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.24, y: 0.32}
+    newSize: {x: 0.23, y: 0.32}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.042063165, y: 0.165227}
+      - {x: -0.06511221, y: 0.18197908}
+      - {x: -0.16830678, y: 0.15010421}
+      - {x: -0.20198081, y: 0.103749745}
+      - {x: -0.046134263, y: 0.107708}
+      - {x: 0.06252343, y: 0.039791446}
+      - {x: 0.093929015, y: -0.06333272}
+      - {x: 0.099864475, y: -0.11795006}
+      - {x: 0.080261365, y: -0.18198332}
+      - {x: 0.18811497, y: -0.17999998}
+      - {x: 0.19009583, y: -0.030519348}
+      - {x: 0.13386576, y: 0.09291754}
