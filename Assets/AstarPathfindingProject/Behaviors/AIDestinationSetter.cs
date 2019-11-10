@@ -20,7 +20,13 @@ namespace Pathfinding {
 
 		private void Start()
 		{
-			target = GameObject.FindGameObjectWithTag("Player").transform;
+            if (GameObject.FindGameObjectsWithTag("Player").Length != 0)
+            {
+                target = GameObject.FindGameObjectWithTag("Player").transform;
+            } else
+            {
+                target = null;
+            }
 		}
 
 		void OnEnable () {

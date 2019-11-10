@@ -29,10 +29,13 @@ public class CameraController : MonoBehaviour
 
 	void UpdateCameraPosition()
 	{
-		float currentXPos = Utility.instance.player.transform.localPosition.x;
-		float currentYPos = Utility.instance.player.transform.localPosition.y;
-		float clampedXPos = Mathf.Clamp(currentXPos, minXPos, maxXPos);
-		float clampedYPos = Mathf.Clamp(currentYPos, minYPos, maxYPos);
-		transform.position = new Vector3(clampedXPos, clampedYPos, Z_POSITION);
+        if (Utility.instance.player != null)
+        {
+            float currentXPos = Utility.instance.player.transform.localPosition.x;
+            float currentYPos = Utility.instance.player.transform.localPosition.y;
+            float clampedXPos = Mathf.Clamp(currentXPos, minXPos, maxXPos);
+            float clampedYPos = Mathf.Clamp(currentYPos, minYPos, maxYPos);
+            transform.position = new Vector3(clampedXPos, clampedYPos, Z_POSITION);
+        }
 	}
 }
