@@ -54,6 +54,7 @@ public class Enemy : MonoBehaviour
             animator.SetBool("dead", true);
             Destroy(particle, 1f);
             Destroy(gameObject, 1f);
+            ScoreScript.scoreVal += 1;
         } else
         {
             GameObject particle = Instantiate(impactExplosion, transform);

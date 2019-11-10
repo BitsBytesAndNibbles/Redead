@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public Animator animator;
     Vector2 movement;
     public SpriteRenderer spriteRenderer;
+    
 
     private float timeBtwAttack;
     private float startTimeBtwAttack=0.33f;
@@ -79,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
     public void TakeDamage()
     {
         animator.SetBool("dead", true);
+        FindObjectOfType<GameManager>().EndGame();
         Destroy(gameObject, 1.5f);
     }
 }
