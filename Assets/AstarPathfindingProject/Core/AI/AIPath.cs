@@ -257,6 +257,7 @@ namespace Pathfinding {
 		/// So when the agent is close to the destination this method will typically be called every <see cref="repathRate"/> seconds.
 		/// </summary>
 		public virtual void OnTargetReached () {
+            GetComponentInChildren<Animator>().SetBool("attack", true);
 		}
 
 		/// <summary>
@@ -315,7 +316,10 @@ namespace Pathfinding {
 			if (distanceToEnd <= endReachedDistance) {
 				reachedEndOfPath = true;
 				OnTargetReached();
-			}
+			} else
+            {
+                GetComponentInChildren<Animator>().SetBool("attack", false);
+            }
 		}
 
 		/// <summary>Called during either Update or FixedUpdate depending on if rigidbodies are used for movement or not</summary>
@@ -345,7 +349,10 @@ namespace Pathfinding {
 			// Check if we have reached the target
 			var prevTargetReached = reachedEndOfPath;
 			reachedEndOfPath = distanceToEnd <= endReachedDistance && interpolator.valid;
-			if (!prevTargetReached && reachedEndOfPath) OnTargetReached();
+            if (!prevTargetReached && reachedEndOfPath)
+            {
+                OnTargetReached();
+            }
 			float slowdown;
 
 			// Normalized direction of where the agent is looking
