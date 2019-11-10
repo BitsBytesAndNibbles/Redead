@@ -30,7 +30,14 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-        animator.SetFloat("speed", movement.sqrMagnitude);
+        if (!animator.GetBool("dead"))
+        {
+            animator.SetFloat("speed", movement.sqrMagnitude);
+        } else
+        {
+            animator.SetFloat("speed", 0);
+        }
+        
         if (!animator.GetBool("attack") && (movement.x < 0 && !spriteRenderer.flipX || movement.x > 0 && spriteRenderer.flipX))
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
@@ -49,11 +56,15 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetBool("attack", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 
-                for (int i = 0; i < enemiesToDamage.Length; i++)
+                if (enemiesToDamage.Length != 0)
                 {
-                    enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    for (int i = 0; i < enemiesToDamage.Length; i++)
+                    {
+                        enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+                    }
+                    timeBtwAttack = startTimeBtwAttack;
                 }
-                timeBtwAttack = startTimeBtwAttack;
+                
             }
         }
         else
@@ -82,5 +93,13 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("dead", true);
         FindObjectOfType<GameManager>().EndGame();
         Destroy(gameObject, 1.5f);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "EnemyAttack")
+        {
+            TakeDamage();
+        }
     }
 }
