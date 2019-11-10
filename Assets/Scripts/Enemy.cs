@@ -43,9 +43,9 @@ public class Enemy : MonoBehaviour
             Destroy(gameObject, 1f);
         } else
         {
-            //animator.SetTrigger("New Trigger");
+            animator.SetTrigger("hit");
         }
-        
+
     }
 
 	private void OnTriggerExit2D(Collider2D collision)
