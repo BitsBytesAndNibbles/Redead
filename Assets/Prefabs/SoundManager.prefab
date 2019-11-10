@@ -144,3 +144,5 @@ MonoBehaviour:
   skeletonHitSound2: {fileID: 8300000, guid: 23c9d6500ba3ac64faafdc94c9fbc2b2, type: 3}
   skeletonHitSound3: {fileID: 8300000, guid: 307c338b7eef0d145aa8e815f14352a3, type: 3}
   skeletonHitSound4: {fileID: 8300000, guid: 76ecddf65a4e11d4a9b0002796fa23eb, type: 3}
+  MainTheme: {fileID: 8300000, guid: 7b10a83c1768d684fbc8f296dfae1df7, type: 3}
+  GameTheme: {fileID: 8300000, guid: 44c837a26a800fd44baceeb2fc0a01a6, type: 3}
