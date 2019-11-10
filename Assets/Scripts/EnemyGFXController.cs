@@ -8,7 +8,6 @@ public class EnemyGFXController : MonoBehaviour
     private AIPath enemy;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-    public int health;
 
     // Start is called before the first frame update
     void Start()
@@ -29,17 +28,11 @@ public class EnemyGFXController : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log(collision.name);
         if (collision.tag == "Player")
         {
             animator.SetBool("attack", false);
         }
-    }
-
-    public void TakeDamage(int damage)
-    {
-        Debug.Log("hit");
-        health -= damage;
-        animator.SetBool("hit", true);
     }
 
 }
