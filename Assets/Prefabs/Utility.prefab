@@ -105,7 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac55f7281db477c4388a6166b98fdef9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 7105809368993297101, guid: 8c9e1e7a72282b84aa56a72a541f32bd,
+  skeletonPrefab: {fileID: 7105809368993297101, guid: 8c9e1e7a72282b84aa56a72a541f32bd,
+    type: 3}
+  wizardPrefab: {fileID: 7105809368993297101, guid: 3e8333a48dd0d61478b082bf5cf0821d,
     type: 3}
   topleftPoint: {fileID: 8648947054912506136}
   bottomrightPoint: {fileID: 8648947053955550922}

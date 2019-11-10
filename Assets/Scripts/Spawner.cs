@@ -25,10 +25,19 @@ public class Spawner : MonoBehaviour
 		if (currentEnemeries < MAXIMUM_ENEMIES)
 		{
 			Vector2 spawnPoint = GenerateRandownSpawnPoint();
-			Instantiate(Utility.instance.enemyPrefab, spawnPoint, Quaternion.identity);
+			bool isSkeleton = Random.Range(0, 2) == 0 ? true : false;
+			if (isSkeleton)
+			{
+				Instantiate(Utility.instance.skeletonPrefab, spawnPoint, Quaternion.identity);
+			}
+			else
+			{
+				Instantiate(Utility.instance.wizardPrefab, spawnPoint, Quaternion.identity);
+			}
+
 			currentEnemeries++;
 		}
-		
+
 		Invoke("SpawnEnemies", 0.5f);
 	}
 
