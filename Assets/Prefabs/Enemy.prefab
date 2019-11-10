@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 3
-  deathEffect: {fileID: 0}
-  deathExplosion: {fileID: 0}
+  deathExplosion: {fileID: 3660269150749615342, guid: fc095caa264d04a49b0ab82852080fe7,
+    type: 3}
   spriteRenderer: {fileID: 0}
 --- !u!114 &7105809368993297091
 MonoBehaviour:
