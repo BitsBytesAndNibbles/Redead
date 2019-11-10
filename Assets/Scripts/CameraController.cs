@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
 	void Start()
     {
 		minXPos = Utility.instance.topleftPoint.localPosition.x + 11f;
-		maxXPos = Utility.instance.bottomrightPoint.localPosition.x - 11f;
+		maxXPos = Utility.instance.bottomrightPoint.localPosition.x - 9f;
 		minYPos = Utility.instance.bottomrightPoint.localPosition.y + 4f;
 		maxYPos = Utility.instance.topleftPoint.localPosition.y - 4f;
 	}
