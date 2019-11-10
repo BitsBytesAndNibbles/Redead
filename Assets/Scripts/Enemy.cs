@@ -6,6 +6,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
+	public float enemyDestroyTime;
     public GameObject deathExplosion;
     public GameObject impactExplosion;
 
@@ -43,9 +44,10 @@ public class Enemy : MonoBehaviour
             GameObject particle = Instantiate(deathExplosion, transform);
             animator.SetBool("dead", true);
             Destroy(particle, 1f);
-            Destroy(gameObject, 1f);
+            Destroy(gameObject, enemyDestroyTime);
             ScoreScript.scoreVal += 1;
-        } else
+        }
+		else
         {
             GameObject particle = Instantiate(impactExplosion, transform);
             Destroy(particle, 1f);

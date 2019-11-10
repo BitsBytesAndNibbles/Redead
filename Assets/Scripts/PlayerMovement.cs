@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetFloat("speed", 0);
         }
         
-        if (!animator.GetBool("attack") && (movement.x < 0 && !spriteRenderer.flipX || movement.x > 0 && spriteRenderer.flipX))
+        if ((movement.x < 0 && !spriteRenderer.flipX || movement.x > 0 && spriteRenderer.flipX))
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
 			attackPos.localPosition = new Vector2(attackPos.localPosition.x * -1, attackPos.localPosition.y);
@@ -52,19 +52,16 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("attack", false);
             if (Input.GetKey(KeyCode.Space))
             {
-
                 animator.SetBool("attack", true);
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-
-                if (enemiesToDamage.Length != 0)
+                for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
-                    for (int i = 0; i < enemiesToDamage.Length; i++)
+                    if (enemiesToDamage[i].GetComponent<Enemy>() is Enemy)
                     {
                         enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
                     }
-                    timeBtwAttack = startTimeBtwAttack;
                 }
-                
+                timeBtwAttack = startTimeBtwAttack;
             }
         }
         else
