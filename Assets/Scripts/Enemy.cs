@@ -14,8 +14,13 @@ public class Enemy : MonoBehaviour
     public SpriteRenderer spriteRenderer;
 	private AIPath enemy;
 
-	// Start is called before the first frame update
-	void Start()
+    public Transform attackPos;
+    public float attackRange;
+    public LayerMask playersToHit;
+    public int damage;
+
+    // Start is called before the first frame update
+    void Start()
     { 
 		animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -29,7 +34,8 @@ public class Enemy : MonoBehaviour
 		if (enemy.currentDir[0] < 0 && !spriteRenderer.flipX || enemy.currentDir[0] > 0 && spriteRenderer.flipX)
 		{
 			spriteRenderer.flipX = !spriteRenderer.flipX;
-		}
+            attackPos.localPosition = new Vector2(attackPos.localPosition.x * -1, attackPos.localPosition.y);
+        }
 
 		
     }
@@ -61,4 +67,10 @@ public class Enemy : MonoBehaviour
 			animator.SetBool("attack", false);
 		}
 	}
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
 }
