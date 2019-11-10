@@ -6,7 +6,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public int health;
-    public GameObject deathExplosion;
+    public ParticleSystem deathEffect;
+    public ParticleSystem deathExplosion;
 
 	private Animator animator;
     public SpriteRenderer spriteRenderer;
@@ -15,7 +16,7 @@ public class Enemy : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
     {
-        
+        deathExplosion = GetComponent<ParticleSystem>();
 		animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 		enemy = GetComponentInParent<AIPath>();
@@ -30,19 +31,21 @@ public class Enemy : MonoBehaviour
 			spriteRenderer.flipX = !spriteRenderer.flipX;
 		}
 
-		if (health <= 0)
-        {
-            animator.SetBool("dead", true);
-            GameObject particle = Instantiate(deathExplosion, transform);
-            Destroy(gameObject, 1f);
-        }
-        animator.SetBool("hit", false);
+		
     }
     
     public void TakeDamage(int damage)
     {
         health -= damage;
-        animator.SetBool("hit", true);
+        if (health <= 0)
+        {
+            animator.SetBool("dead", true);
+            Destroy(gameObject, 1f);
+        } else
+        {
+            animator.SetTrigger("New Trigger");
+        }
+        
     }
 
 	private void OnTriggerExit2D(Collider2D collision)
