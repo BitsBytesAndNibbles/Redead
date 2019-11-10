@@ -31,18 +31,21 @@ public class Enemy : MonoBehaviour
 			spriteRenderer.flipX = !spriteRenderer.flipX;
 		}
 
-		if (health <= 0)
-        {
-            animator.SetBool("dead", true);
-            Destroy(gameObject, 1f);
-        }
-        animator.SetBool("hit", false);
+		
     }
     
     public void TakeDamage(int damage)
     {
         health -= damage;
-        animator.SetBool("hit", true);
+        if (health <= 0)
+        {
+            animator.SetBool("dead", true);
+            Destroy(gameObject, 1f);
+        } else
+        {
+            animator.SetTrigger("New Trigger");
+        }
+        
     }
 
 	private void OnTriggerExit2D(Collider2D collision)
