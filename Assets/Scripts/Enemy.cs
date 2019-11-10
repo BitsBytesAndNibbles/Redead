@@ -10,7 +10,6 @@ public class Enemy : MonoBehaviour
     public GameObject deathExplosion;
     public GameObject impactExplosion;
 
-
     private Animator animator;
     public SpriteRenderer spriteRenderer;
 	private AIPath enemy;
@@ -39,6 +38,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
+        SoundManager.instance.PlaySound();
         if (health <= 0)
         {
             GameObject particle = Instantiate(deathExplosion, transform);
