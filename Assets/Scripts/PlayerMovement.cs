@@ -33,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
         if (!animator.GetBool("attack") && (movement.x < 0 && !spriteRenderer.flipX || movement.x > 0 && spriteRenderer.flipX))
         {
             spriteRenderer.flipX = !spriteRenderer.flipX;
+			attackPos.localPosition = new Vector2(attackPos.localPosition.x * -1, attackPos.localPosition.y);
         }
 
         //attack
