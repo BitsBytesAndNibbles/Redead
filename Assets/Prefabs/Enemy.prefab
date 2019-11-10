@@ -116,6 +116,8 @@ MonoBehaviour:
   health: 3
   deathExplosion: {fileID: 165554893454240080, guid: 072f080244b23fc4b95245643e613931,
     type: 3}
+  impactExplosion: {fileID: 3620198904670148943, guid: 0f2fe4e303c1b324db604e6b696f4575,
+    type: 3}
   spriteRenderer: {fileID: 0}
 --- !u!114 &7105809368993297091
 MonoBehaviour:

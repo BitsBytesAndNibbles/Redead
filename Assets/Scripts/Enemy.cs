@@ -7,8 +7,10 @@ public class Enemy : MonoBehaviour
 {
     public int health;
     public GameObject deathExplosion;
+    public GameObject impactExplosion;
 
-	private Animator animator;
+
+    private Animator animator;
     public SpriteRenderer spriteRenderer;
 	private AIPath enemy;
 
@@ -40,9 +42,12 @@ public class Enemy : MonoBehaviour
         {
             GameObject particle = Instantiate(deathExplosion, transform);
             animator.SetBool("dead", true);
+            Destroy(particle, 1f);
             Destroy(gameObject, 1f);
         } else
         {
+            GameObject particle = Instantiate(impactExplosion, transform);
+            Destroy(particle, 1f);
             animator.SetTrigger("hit");
         }
 
