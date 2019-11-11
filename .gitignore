@@ -57,3 +57,135 @@ sysinfo.txt
 
 # Crashlytics generated file
 crashlytics-build.properties
+Out/New Unity Project.exe
+Out/UnityCrashHandler64.exe
+Out/UnityPlayer.dll
+Out/WinPixEventRuntime.dll
+Out/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll
+Out/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll
+Out/MonoBleedingEdge/etc/mono/browscap.ini
+Out/MonoBleedingEdge/etc/mono/config
+Out/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+Out/MonoBleedingEdge/etc/mono/2.0/machine.config
+Out/MonoBleedingEdge/etc/mono/2.0/settings.map
+Out/MonoBleedingEdge/etc/mono/2.0/web.config
+Out/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser
+Out/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx
+Out/MonoBleedingEdge/etc/mono/4.0/machine.config
+Out/MonoBleedingEdge/etc/mono/4.0/settings.map
+Out/MonoBleedingEdge/etc/mono/4.0/web.config
+Out/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser
+Out/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx
+Out/MonoBleedingEdge/etc/mono/4.5/machine.config
+Out/MonoBleedingEdge/etc/mono/4.5/settings.map
+Out/MonoBleedingEdge/etc/mono/4.5/web.config
+Out/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser
+Out/MonoBleedingEdge/etc/mono/mconfig/config.xml
+Out/New Unity Project_Data/app.info
+Out/New Unity Project_Data/boot.config
+Out/New Unity Project_Data/globalgamemanagers
+Out/New Unity Project_Data/globalgamemanagers.assets
+Out/New Unity Project_Data/level0
+Out/New Unity Project_Data/level1
+Out/New Unity Project_Data/resources.assets
+Out/New Unity Project_Data/resources.assets.resS
+Out/New Unity Project_Data/sharedassets0.assets
+Out/New Unity Project_Data/sharedassets0.assets.resS
+Out/New Unity Project_Data/sharedassets0.resource
+Out/New Unity Project_Data/sharedassets1.assets
+Out/New Unity Project_Data/sharedassets1.assets.resS
+Out/New Unity Project_Data/sharedassets1.resource
+Out/New Unity Project_Data/Managed/Assembly-CSharp.dll
+Out/New Unity Project_Data/Managed/AstarPathfindingProject.dll
+Out/New Unity Project_Data/Managed/Mono.Security.dll
+Out/New Unity Project_Data/Managed/mscorlib.dll
+Out/New Unity Project_Data/Managed/netstandard.dll
+Out/New Unity Project_Data/Managed/Pathfinding.Ionic.Zip.Reduced.dll
+Out/New Unity Project_Data/Managed/System.ComponentModel.Composition.dll
+Out/New Unity Project_Data/Managed/System.Configuration.dll
+Out/New Unity Project_Data/Managed/System.Core.dll
+Out/New Unity Project_Data/Managed/System.Data.dll
+Out/New Unity Project_Data/Managed/System.Diagnostics.StackTrace.dll
+Out/New Unity Project_Data/Managed/System.dll
+Out/New Unity Project_Data/Managed/System.Drawing.dll
+Out/New Unity Project_Data/Managed/System.EnterpriseServices.dll
+Out/New Unity Project_Data/Managed/System.Globalization.Extensions.dll
+Out/New Unity Project_Data/Managed/System.IO.Compression.dll
+Out/New Unity Project_Data/Managed/System.IO.Compression.FileSystem.dll
+Out/New Unity Project_Data/Managed/System.Net.Http.dll
+Out/New Unity Project_Data/Managed/System.Numerics.dll
+Out/New Unity Project_Data/Managed/System.Runtime.Serialization.dll
+Out/New Unity Project_Data/Managed/System.Runtime.Serialization.Xml.dll
+Out/New Unity Project_Data/Managed/System.ServiceModel.Internals.dll
+Out/New Unity Project_Data/Managed/System.Transactions.dll
+Out/New Unity Project_Data/Managed/System.Xml.dll
+Out/New Unity Project_Data/Managed/System.Xml.Linq.dll
+Out/New Unity Project_Data/Managed/System.Xml.XPath.XDocument.dll
+Out/New Unity Project_Data/Managed/Unity.Analytics.DataPrivacy.dll
+Out/New Unity Project_Data/Managed/Unity.TextMeshPro.dll
+Out/New Unity Project_Data/Managed/UnityEngine.AccessibilityModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.AIModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.AnimationModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ARModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.AssetBundleModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.AudioModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.BaselibModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ClothModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ClusterInputModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ClusterRendererModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.CoreModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.CrashReportingModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.DirectorModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.dll
+Out/New Unity Project_Data/Managed/UnityEngine.FileSystemHttpModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.GameCenterModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.GridModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.HotReloadModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ImageConversionModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.IMGUIModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.InputModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.JSONSerializeModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.LocalizationModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.Networking.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ParticleSystemModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.PerformanceReportingModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.Physics2DModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.PhysicsModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ProfilerModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.ScreenCaptureModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.SharedInternalsModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.SpatialTracking.dll
+Out/New Unity Project_Data/Managed/UnityEngine.SpriteMaskModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.SpriteShapeModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.StreamingModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.StyleSheetsModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.SubstanceModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TerrainModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TerrainPhysicsModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TextCoreModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TextRenderingModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TilemapModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.Timeline.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TimelineModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.TLSModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UI.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UIElementsModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UIModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UmbraModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UNETModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityAnalyticsModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityConnectModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityTestProtocolModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityWebRequestModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.VehiclesModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.VFXModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.VideoModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.VRModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.WindModule.dll
+Out/New Unity Project_Data/Managed/UnityEngine.XRModule.dll
+Out/New Unity Project_Data/Resources/unity default resources
+Out/New Unity Project_Data/Resources/unity_builtin_extra
